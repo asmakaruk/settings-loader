@@ -36,22 +36,33 @@ class Loader
             self::$_instance = new self();
         }
         $_paths     = self::$_instance->getValidPaths($path);
-        $data       = [];
         foreach ( $_paths AS $_path ) {
             //Get file information
             $info       = pathinfo($_path);
             $extension  = isset($info['extension']) ? $info['extension'] : '';
             $parser     = self::$_instance->getFileParser($extension);
             // Try and load file
-            $data       = array_replace_recursive($data, call_user_func([$parser, 'parse'], $_path));
+            self::$_data= array_replace_recursive(self::$_data, call_user_func([$parser, 'parse'], $_path));
         }
 
-        return $data;
+        return self::$_data;
     }
 
-    public function get($key, $default = null)
+    public static function get($key, $default = null)
     {
+        if ( ! is_scalar($key) ) {
+            throw new Exception('Invalid parameter type.');
+        }
 
+        $_path = explode('.', $key);
+        $value = self::$_data;
+        foreach ( $_path AS $_item ) {
+            if ( ! isset($value[$_item]) ) {
+                return $default;
+            }
+            $value = $value[$_item];
+        }
+        return $value;
     }
 
 

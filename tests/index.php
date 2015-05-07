@@ -44,3 +44,10 @@ echo "[FOLDER]: <br />";
 $folder = __DIR__ . DIRECTORY_SEPARATOR . 'files' ;
 pre(\MarykSoft\Settings\Loader::load($folder));
 echo "<br />";
+
+echo "GET: <br />";
+pre(\MarykSoft\Settings\Loader::get('php'));
+echo "<br />";
+pre(\MarykSoft\Settings\Loader::get('ini.app.timezone'));
+echo "<br />";
+pre(\MarykSoft\Settings\Loader::get('ini.app.host', 'localhost'));
