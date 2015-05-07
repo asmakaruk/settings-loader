@@ -1,0 +1,23 @@
+{
+  "name": "asmakaruk/settings-loader",
+  "type": "library",
+  "description": "Simple configuration file loader. Supports PHP, JSON, INI and XML files.",
+  "keywords": ["configuration", "config", "json", "ini", "xml", "php"],
+  "minimum-stability": "stable",
+  "version" : "0.1",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexandr Makaruk",
+      "email": "a.s.makaruk@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MarykSoft\\": "src"
+    }
+  }
+}

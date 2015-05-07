@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <xml>
+        <app>
+            <name>configuration</name>
+            <secret>s3cr3t</secret>
+        </app>
+        <db.host>localhost</db.host>
+        <db.port>3306</db.port>
+        <servers>
+            <server1>host1</server1>
+            <server2>host2</server2>
+            <server3>host3</server3>
+        </servers>
+    </xml>
+</config>
