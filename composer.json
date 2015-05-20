@@ -3,7 +3,7 @@
   "type": "library",
   "description": "Simple configuration file loader. Supports PHP, JSON, INI and XML files.",
   "keywords": ["configuration", "config", "json", "ini", "xml", "php"],
-  "version" : "0.0.1",
+  "version" : "0.0.2",
   "license": "MIT",
   "authors": [
     {
