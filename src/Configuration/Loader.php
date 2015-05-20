@@ -1,16 +1,16 @@
 <?php
 /**
  * Class Loader
- * @package MarykSoft\Settings
+ * @package Configuration
  * @author Alexandr Makaruk <a.s.makaruk@gmail.com>
  */
 
 
-namespace MarykSoft\Settings;
+namespace Configuration;
 
-use MarykSoft\Settings\Exception\EmptyDirectoryException;
-use MarykSoft\Settings\Exception\FileNotFoundException;
-use MarykSoft\Settings\Exception\UnsupportedFormatException;
+use Configuration\Exception\EmptyDirectoryException;
+use Configuration\Exception\FileNotFoundException;
+use Configuration\Exception\UnsupportedFormatException;
 
 class Loader
 {
@@ -24,10 +24,10 @@ class Loader
      * @var [] Supported file parsers
      */
     protected static $supportedFileParser   = [
-        'ini'   => 'MarykSoft\Settings\FileParser\IniFileParser',
-        'json'  => 'MarykSoft\Settings\FileParser\JsonFileParser',
-        'php'   => 'MarykSoft\Settings\FileParser\PhpFileParser',
-        'xml'   => 'MarykSoft\Settings\FileParser\XmlFileParser',
+        'ini'   => 'Configuration\FileParser\IniFileParser',
+        'json'  => 'Configuration\FileParser\JsonFileParser',
+        'php'   => 'Configuration\FileParser\PhpFileParser',
+        'xml'   => 'Configuration\FileParser\XmlFileParser',
     ];
 
     public static function load($path)

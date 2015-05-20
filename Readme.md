@@ -20,11 +20,11 @@ Settings Loader is very simple to use. You can load files and get settings value
 
 ```php
 // Loading single file
-$data = \MarykSoft\Settings\Loader::load('config.ini');
+$data = \Configuration\Loader::load('config.ini');
 //Load values from multiple files
-$data = \MarykSoft\Settings\Loader::load(['config.json', 'config.xml']);
+$data = \Configuration\Loader::load(['config.json', 'config.xml']);
 //Load values from directory
-$data = \MarykSoft\Settings\Loader::load(__DIR__ . '/config');
+$data = \Configuration\Loader::load(__DIR__ . '/config');
 ```
 
 ### Getting values
@@ -32,8 +32,8 @@ $data = \MarykSoft\Settings\Loader::load(__DIR__ . '/config');
 Getting values can be done in two ways. One, by using the `get()` method:
 
 ```php
-$app = \MarykSoft\Settings\Loader::get('app');
-$timezone = \MarykSoft\Settings\Loader::get('app.timezone');
-$host = \MarykSoft\Settings\Loader::get('app.host', 'localhost');
+$app = \Configuration\Loader::get('app');
+$timezone = \Configuration\Loader::get('app.timezone');
+$host = \Configuration\Loader::get('app.host', 'localhost');
 ```
 

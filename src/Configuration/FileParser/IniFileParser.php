@@ -1,15 +1,15 @@
 <?php
 /**
  * Class IniFileParser
- * @package MarykSoft\Settings\FileParser
+ * @package Configuration\FileParser
  * @author Alexandr Makaruk <a.s.makaruk@gmail.com>
  */
 
 
-namespace MarykSoft\Settings\FileParser;
+namespace Configuration\FileParser;
 
 
-use MarykSoft\Settings\Exception;
+use Configuration\Exception;
 
 class IniFileParser extends AbstractFileParser
 {

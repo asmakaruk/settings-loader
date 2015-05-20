@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Exception
- * @package MarykSoft\Settings
+ * @package Configuration
  * @author Alexandr Makaruk <a.s.makaruk@gmail.com>
  */
 
 
-namespace MarykSoft\Settings;
+namespace Configuration;
 
 
 class Exception extends \Exception

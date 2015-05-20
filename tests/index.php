@@ -19,35 +19,35 @@ function pre($a)
 
 echo "INI: <br />";
 $iniFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.ini';
-pre(\MarykSoft\Settings\Loader::load($iniFile));
+pre(\Configuration\Loader::load($iniFile));
 echo "<br />";
 echo "JSON: <br />";
 $jsonFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.json';
-pre(\MarykSoft\Settings\Loader::load($jsonFile));
+pre(\Configuration\Loader::load($jsonFile));
 echo "<br />";
 
 echo "PHP: <br />";
 $phpFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.php';
-pre(\MarykSoft\Settings\Loader::load($phpFile));
+pre(\Configuration\Loader::load($phpFile));
 echo "<br />";
 
 echo "XML: <br />";
 $xmlFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.xml';
-pre(\MarykSoft\Settings\Loader::load($xmlFile));
+pre(\Configuration\Loader::load($xmlFile));
 echo "<br />";
 
 echo "[INI, PHP]: <br />";
-pre(\MarykSoft\Settings\Loader::load([$iniFile, $phpFile]));
+pre(\Configuration\Loader::load([$iniFile, $phpFile]));
 echo "<br />";
 
 echo "[FOLDER]: <br />";
 $folder = __DIR__ . DIRECTORY_SEPARATOR . 'files' ;
-pre(\MarykSoft\Settings\Loader::load($folder));
+pre(\Configuration\Loader::load($folder));
 echo "<br />";
 
 echo "GET: <br />";
-pre(\MarykSoft\Settings\Loader::get('php'));
+pre(\Configuration\Loader::get('php'));
 echo "<br />";
-pre(\MarykSoft\Settings\Loader::get('ini.app.timezone'));
+pre(\Configuration\Loader::get('ini.app.timezone'));
 echo "<br />";
-pre(\MarykSoft\Settings\Loader::get('ini.app.host', 'localhost'));
+pre(\Configuration\Loader::get('ini.app.host', 'localhost'));
