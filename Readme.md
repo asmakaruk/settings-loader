@@ -9,7 +9,7 @@ Settings Loader requires PHP 5.4+.
 The supported way of installing Config is via Composer.
 
 ```sh
-$ composer require asmakaruk/settings-loader
+$ composer require asmakaruk/config-loader
 ```
 
 ## Usage
