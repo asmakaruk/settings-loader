@@ -19,35 +19,35 @@ function pre($a)
 
 echo "INI: <br />";
 $iniFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.ini';
-pre(\Configuration\Loader::load($iniFile));
+pre(\Configuration\Settings::load($iniFile));
 echo "<br />";
 echo "JSON: <br />";
 $jsonFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.json';
-pre(\Configuration\Loader::load($jsonFile));
+pre(\Configuration\Settings::load($jsonFile));
 echo "<br />";
 
 echo "PHP: <br />";
 $phpFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.php';
-pre(\Configuration\Loader::load($phpFile));
+pre(\Configuration\Settings::load($phpFile));
 echo "<br />";
 
 echo "XML: <br />";
 $xmlFile = __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . 'config.xml';
-pre(\Configuration\Loader::load($xmlFile));
+pre(\Configuration\Settings::load($xmlFile));
 echo "<br />";
 
 echo "[INI, PHP]: <br />";
-pre(\Configuration\Loader::load([$iniFile, $phpFile]));
+pre(\Configuration\Settings::load([$iniFile, $phpFile]));
 echo "<br />";
 
 echo "[FOLDER]: <br />";
 $folder = __DIR__ . DIRECTORY_SEPARATOR . 'files' ;
-pre(\Configuration\Loader::load($folder));
+pre(\Configuration\Settings::load($folder));
 echo "<br />";
 
 echo "GET: <br />";
-pre(\Configuration\Loader::get('php'));
+pre(\Configuration\Settings::get('php'));
 echo "<br />";
-pre(\Configuration\Loader::get('ini.app.timezone'));
+pre(\Configuration\Settings::get('ini.app.timezone'));
 echo "<br />";
-pre(\Configuration\Loader::get('ini.app.host', 'localhost'));
+pre(\Configuration\Settings::get('ini.app.host', 'localhost'));

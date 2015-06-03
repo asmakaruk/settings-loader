@@ -12,9 +12,9 @@ use Configuration\Exception\EmptyDirectoryException;
 use Configuration\Exception\FileNotFoundException;
 use Configuration\Exception\UnsupportedFormatException;
 
-class Loader
+class Settings
 {
-    /** @var null|Loader */
+    /** @var null|Settings */
     protected static $_instance             = null;
 
     /** @var array Storage */
