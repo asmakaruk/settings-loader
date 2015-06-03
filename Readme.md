@@ -9,7 +9,7 @@ Settings Loader requires PHP 5.4+.
 The supported way of installing Config is via Composer.
 
 ```sh
-$ composer require asmakaruk/config-loader
+$ composer require asmakaruk/settings-loader
 ```
 
 ## Usage
@@ -20,11 +20,11 @@ Settings Loader is very simple to use. You can load files and get settings value
 
 ```php
 // Loading single file
-$data = \Configuration\Loader::load('config.ini');
+$data = \Configuration\Settings::load('config.ini');
 //Load values from multiple files
-$data = \Configuration\Loader::load(['config.json', 'config.xml']);
+$data = \Configuration\Settings::load(['config.json', 'config.xml']);
 //Load values from directory
-$data = \Configuration\Loader::load(__DIR__ . '/config');
+$data = \Configuration\Settings::load(__DIR__ . '/config');
 ```
 
 ### Getting values
@@ -32,8 +32,8 @@ $data = \Configuration\Loader::load(__DIR__ . '/config');
 Getting values can be done in two ways. One, by using the `get()` method:
 
 ```php
-$app = \Configuration\Loader::get('app');
-$timezone = \Configuration\Loader::get('app.timezone');
-$host = \Configuration\Loader::get('app.host', 'localhost');
+$app = \Configuration\Settings::get('app');
+$timezone = \Configuration\Settings::get('app.timezone');
+$host = \Configuration\Settings::get('app.host', 'localhost');
 ```
 
